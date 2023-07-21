@@ -27,6 +27,10 @@ app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/category", categoryRoutes);
 app.use("/api/v1/product", productRoutes);
 
+app.use((req,res)=>{
+  res.send("API is running...")
+})
+
 //rest api
 app.get("/", (req, res) => {
   res.send("<h1>Welcome to Sweet Home</h1>");
